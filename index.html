@@ -5,7 +5,15 @@
   <body>
     <h1>Clicker game</h1>
     <br>
-    <p>Score: <span id="">0</span></p>
-    <button>Click me!</button>
+    <p>Score: <span id="score">0</span></p>
+    <button onclick="clicked()">Click me!</button>
   </body>
+  <script>
+    var score_element = document.getElementById("score")
+    var score = 0;
+    
+    function clicked() {
+      score = score + 1;
+      score_element.innerHTML = score;
+    }
 </html>
